@@ -1,3 +1,4 @@
+# Warm-up
 install.packages("beepr")
 beepr::beep(0)
 
@@ -7,3 +8,11 @@ for (i in 1:11) {
 }
 
 print("Done!")
+
+# Part 1
+urn_prob <- function(nreps = 100000, b1 = 10, y1 = 8, b2 = 6, y2 = 6) {
+  i <- binom(b1/(b1+y1), 1, nreps)
+  return(mean(i+b2)/(i+b2+y2))
+}
+
+urn_prob
