@@ -1,0 +1,9 @@
+install.packages("beepr")
+beepr::beep(0)
+
+for (i in 1:11) {
+  beepr::beep(i)
+  Sys.sleep(2)
+}
+
+print("Done!")
